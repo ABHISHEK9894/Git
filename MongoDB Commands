@@ -1,0 +1,64 @@
+DATABASE COMMANDS:
+1. View all databases
+    - show dbs
+
+2. Create a new or switch databases 
+    - use <dbName>
+
+3. View current Database
+    - db
+
+4. Delete Database 
+    - db.dropDatabase()
+
+COLLECTIONS COMMAND
+
+5. Show Collections
+    - show collections
+
+6. Create a collection named 'comments'
+    - db.createCollection('comments')
+
+7. Drop a collection named 'comments'
+    - db.comments.drop()
+
+ROW(DOCUMENTS) COMMANDS
+
+8. Show all Rows in a Collection 
+    - db.comments.find()
+
+9. Show all Rows in a Collection (Prettified)
+    - db.comments.find().pretty()
+
+10. Find the first row matching the object
+    - db.comments.findOne({name: 'Harry'})
+
+11. Insert One Row
+    - db.comments.insert({
+    'name': 'Harry',
+    'lang': 'JavaScript',
+    'member_since': 5
+ })
+
+ 12. Insert many Rows
+    - db.comments.insertMany([{
+    'name': 'Harry',
+    'lang': 'JavaScript',
+    'member_since': 5
+    }, 
+    {'name': 'Rohan',
+    'lang': 'Python',
+    'member_since': 3
+    },
+    {'name': 'Lovish',
+    'lang': 'Java',
+    'member_since': 4
+}])
+
+13. Search in a MongoDb Database
+    - db.comments.find({lang:'Python'})
+
+14. Limit the number of rows in output
+    - db.comments.find().limit(2)
+
+15. 
